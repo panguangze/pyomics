@@ -211,5 +211,5 @@ class Transcript(object):
 
     def getCodon(self, acidpos):
         abspos_arr = self.getAcidPosition(acidpos)
-        return str(getCodonHg19(self.chromosome, self.strand, abspos_arr)).upper()
-
+        return abspos_arr
+        # return str(getCodonHg19(self.chromosome, self.strand, abspos_arr)).upper()
