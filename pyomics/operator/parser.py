@@ -24,17 +24,3 @@ class Parser:
         print(self._locals)
         print(self._globals)
         return self._locals, self._globals
-
-
-# def parser(content, globs, locs):
-#     # run parser
-#     print("this is content: ", content)
-#     parser_model = ParserModel()
-#     globs.update({"__parser__": parser_model})
-#     exec(content, globs, locs)
-#     # get information
-#     # print("this is locals")
-#     # for k1, v1 in locals().items():
-#     #     print(k1, v1)
-#     # reg = locals()["__register__"]
-#     return parser_model._locals, parser_model._globals
