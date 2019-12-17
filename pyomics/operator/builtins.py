@@ -11,8 +11,6 @@ def _retrieve_varname(v):
 @Parser()
 def _register(v, vname, tp):
     vname = vname if vname != None else _retrieve_varname(v)
-    print(vname)
-    print(tp)
     return {vname: v}, tp
 
 

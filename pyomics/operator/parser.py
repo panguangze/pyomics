@@ -12,7 +12,6 @@ class Parser:
         @wraps(fn)
         def __wrapper__(*args, **kwargs):
             variable, tp = fn(*args, **kwargs)
-            print(variable, tp)
             if tp == "local":
                 self._locals.update(variable)
             if tp == "global":
@@ -21,6 +20,4 @@ class Parser:
 
     def parse(self, content, globs, locs):
         exec(content, globs, locs)
-        print(self._locals)
-        print(self._globals)
         return self._locals, self._globals
