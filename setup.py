@@ -1,9 +1,11 @@
-from distutils.core import setup
+import setuptools 
 
 
-setup(
+setuptools.setup(
         name="pyomics", 
         version="1.0", 
         author="ByoRyn",
-        packages=["pyomics"],
+        packages=setuptools.find_packages(exclude=['*.tests']),
+        zip_safe=True,
+        py_modules=['easy_install'],
 )
