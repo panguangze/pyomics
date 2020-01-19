@@ -15,8 +15,6 @@ def model_query_begin():
             if not model.table_exists():
                 logger.debug("Table not found, creating table for %s" % model.__name__)
                 db.create_tables([model])
-        logger.verbose("Connecting database...")
-        db.connect(reuse_if_open=True)
     except OperationalError as error:
         raise DataBaseOperationFailed(error.args)
 

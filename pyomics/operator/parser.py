@@ -19,5 +19,5 @@ class Parser:
         return __wrapper__
 
     def parse(self, content, globs, locs):
-        exec(content, globs, locs)
+        exec(content, {**globs, **locs, **locals(), **globals()})
         return self._locals, self._globals

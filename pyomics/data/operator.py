@@ -9,8 +9,7 @@ class Operator:
         self._name = op_name if op_name != None else self._assign_name(op, op_type)
         self._op = op
         if self._type == "file":
-            with open(op) as ifs:
-                self._op = "".join(ifs.readlines())
+            self._op = open(op).read()
 
     def __repr__(self):
         ret = "Operator name: {}\n".format(self._name)
